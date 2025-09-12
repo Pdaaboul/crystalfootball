@@ -2,32 +2,55 @@
 @import '@tailwindcss/typography';
 
 :root {
-  /* Brand tokens */
-  --text-on-dark: #ffffff;
-  --background: #000000;
-  --foreground: #171717;
+  /* Crystal Football Brand Tokens */
+  --royal-blue: #1e66a9;
+  --crystal-blue: #1e66a9; /* Same as royal blue */
+  --dark-navy: #0c2f57;
+  --light-blue-highlight: #3fa9f5;
+  --gold: #ffd700;
+  --deep-gold: #d4af37;
+  --light-cyan: #a3dfff;
+  --charcoal: #0b0e15;
+  --white-text: #ffffff;
 
-  /* shadcn/ui variables */
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96%;
-  --secondary-foreground: 222.2 84% 4.9%;
-  --muted: 210 40% 96%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 210 40% 96%;
-  --accent-foreground: 222.2 84% 4.9%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 222.2 84% 4.9%;
+  /* Background Colors */
+  --background: var(--dark-navy);
+  --background-alt: var(--charcoal);
+  --foreground: var(--white-text);
+
+  /* Primary Actions (Gold) */
+  --primary: var(--gold);
+  --primary-hover: var(--deep-gold);
+  --primary-foreground: var(--charcoal);
+
+  /* Secondary Actions (Royal Blue) */
+  --secondary: var(--royal-blue);
+  --secondary-hover: var(--light-blue-highlight);
+  --secondary-foreground: var(--white-text);
+
+  /* Accent Colors (Cyan) */
+  --accent: var(--light-cyan);
+  --accent-foreground: var(--charcoal);
+
+  /* UI Element Colors */
+  --card: var(--dark-navy);
+  --card-foreground: var(--white-text);
+  --popover: var(--dark-navy);
+  --popover-foreground: var(--white-text);
+  --muted: var(--charcoal);
+  --muted-foreground: #a0a0a0;
+  --destructive: #dc2626;
+  --destructive-foreground: var(--white-text);
+  --border: var(--light-cyan);
+  --input: var(--charcoal);
+  --ring: var(--light-cyan);
   --radius: 0.5rem;
+
+  /* Success and Warning */
+  --success: #10b981;
+  --success-foreground: var(--white-text);
+  --warning: #f59e0b;
+  --warning-foreground: var(--charcoal);
 }
 
 @theme inline {
@@ -39,10 +62,27 @@
   --container-max-width-xl: 1280px;
   --container-max-width-2xl: 1400px;
 
-  /* Color configuration */
+  /* Crystal Football Color System */
+  --color-royal-blue: var(--royal-blue);
+  --color-dark-navy: var(--dark-navy);
+  --color-light-blue: var(--light-blue-highlight);
+  --color-gold: var(--gold);
+  --color-deep-gold: var(--deep-gold);
+  --color-cyan: var(--light-cyan);
+  --color-charcoal: var(--charcoal);
+  --color-white: var(--white-text);
+
+  /* Semantic Color Mappings */
   --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
   --color-foreground: var(--foreground);
-  --color-text-on-dark: var(--text-on-dark);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
 
   /* Font configuration */
   --font-sans: var(--font-geist-sans);
@@ -56,33 +96,10 @@
   --breakpoint-2xl: 1400px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-  }
-}
-
 html {
   height: 100%;
   overflow-x: hidden;
+  background: var(--background);
 }
 
 body {
@@ -90,16 +107,17 @@ body {
   overflow-x: hidden;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
 #__next {
   height: 100%;
 }
 
-/* Container utility class */
+/* Enhanced Container utility class */
 .container {
   width: 100%;
   margin-left: auto;
@@ -140,4 +158,43 @@ body {
   .container {
     max-width: 1400px;
   }
+}
+
+/* Custom utility classes for Crystal Football branding */
+.bg-gradient-royal {
+  background: linear-gradient(135deg, var(--royal-blue), var(--light-blue-highlight));
+}
+
+.bg-gradient-gold {
+  background: linear-gradient(135deg, var(--gold), var(--deep-gold));
+}
+
+.bg-gradient-dark {
+  background: linear-gradient(135deg, var(--dark-navy), var(--charcoal));
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--gold), var(--deep-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(163, 223, 255, 0.3);
+}
+
+.glow-gold {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+/* Focus and hover states for accessibility */
+.focus-visible-gold:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.focus-visible-cyan:focus-visible {
+  outline: 2px solid var(--light-cyan);
+  outline-offset: 2px;
 }
