@@ -23,11 +23,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className="h-full" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-full overflow-x-hidden`}
       >
-        <main className="container min-h-full">{children}</main>
+        <main className="min-h-full">{children}</main>
       </body>
     </html>
   );
