@@ -29,7 +29,7 @@ export default function PackagesPreview() {
         'Ideal for serious members who want to benefit from exclusive systems for a longer period at a discounted price.',
       features: [
         'All benefits of the Monthly Plan',
-        'One Golden Ticket to enter an exclusive draw',
+        'One Cyan Ticket to enter an exclusive draw',
         'Priority customer support & faster responses',
         'Detailed monthly performance reports',
         'Exclusive access to the Three-Way System and Black Bet Protocol',
@@ -50,7 +50,7 @@ export default function PackagesPreview() {
         'Best choice for loyal members: full-season coverage with our strongest exclusive systems and maximum privileges.',
       features: [
         'All benefits of the previous plans',
-        '2 Golden Tickets with special rewards',
+        '2 Cyan Tickets with special rewards',
         'Early access to recommendations before everyone else (Priority Access)',
         'Comprehensive seasonal reports & in-depth analyses',
         'Special membership in the VIP Referral Program with higher commission',
@@ -72,7 +72,7 @@ export default function PackagesPreview() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Choose Your Plan
             </h2>
-            <div className="w-24 h-1 bg-gradient-gold mx-auto rounded-full mb-8" />
+            <div className="w-24 h-1 bg-gradient-cyan mx-auto rounded-full mb-8" />
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Start your profitable betting journey today. All plans include our core AI predictions
               with transparent tracking and money-back guarantee.
@@ -85,7 +85,7 @@ export default function PackagesPreview() {
               const getCardStyling = (tier: string) => {
                 switch (tier) {
                   case 'vip':
-                    return 'border-gold bg-gradient-gold text-charcoal shadow-2xl shadow-gold/20 glow-gold';
+                    return 'border-cyan-blue bg-gradient-cyan text-pure-black shadow-2xl shadow-cyan-blue/20 glow-cyan';
                   case 'mid-tier':
                     return 'border-accent bg-card hover:border-accent hover:shadow-lg hover:shadow-accent/20 glow-cyan';
                   default:
@@ -96,7 +96,7 @@ export default function PackagesPreview() {
               const getBadgeStyling = (tier: string) => {
                 switch (tier) {
                   case 'vip':
-                    return 'bg-charcoal text-gold';
+                    return 'bg-deep-charcoal text-cyan-blue';
                   case 'mid-tier':
                     return 'bg-accent text-charcoal';
                   default:
@@ -210,10 +210,10 @@ export default function PackagesPreview() {
                     <div className="mt-auto">
                       <a
                         href="/packages"
-                        className={`block w-full text-center font-semibold py-4 px-6 rounded-lg transition-all duration-200 focus-visible-gold ${
+                        className={`block w-full text-center font-semibold py-4 px-6 rounded-lg transition-all duration-200 focus-visible-cyan ${
                           pkg.tier === 'vip'
-                            ? 'bg-charcoal hover:bg-charcoal/90 text-gold'
-                            : 'bg-primary hover:bg-primary-hover text-primary-foreground glow-gold hover:glow-gold'
+                            ? 'bg-deep-charcoal hover:bg-deep-charcoal/90 text-cyan-blue'
+                            : 'bg-primary hover:bg-primary-hover text-primary-foreground glow-cyan hover:glow-cyan-strong'
                         }`}
                       >
                         {pkg.cta}

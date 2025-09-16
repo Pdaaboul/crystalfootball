@@ -41,7 +41,7 @@ export default function Differentiators() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Our 6-Layer AI Engine
             </h2>
-            <div className="w-24 h-1 bg-gradient-gold mx-auto rounded-full mb-8" />
+            <div className="w-24 h-1 bg-gradient-cyan mx-auto rounded-full mb-8" />
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Every prediction is processed through our comprehensive 6-Layer Analytical Framework,
               ensuring accuracy, safety, and intelligent risk control before reaching our members.
@@ -75,7 +75,7 @@ export default function Differentiators() {
           </div>
 
           {/* Why Choose Crystal Football Section */}
-          <div className="mt-20 bg-gradient-royal rounded-2xl p-8 md:p-12">
+          <div className="mt-20 bg-gradient-dark rounded-2xl p-8 md:p-12">
             <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
               Why Choose Crystal Football?
             </h3>
@@ -111,7 +111,7 @@ export default function Differentiators() {
               </p>
               <a
                 href="/register"
-                className="inline-flex items-center justify-center bg-gold hover:bg-deep-gold text-charcoal px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 focus-visible-gold glow-gold hover:glow-gold"
+                className="inline-flex items-center justify-center bg-primary hover:bg-primary-hover text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 focus-visible-cyan glow-cyan hover:glow-cyan-strong"
               >
                 Join Our Community
               </a>

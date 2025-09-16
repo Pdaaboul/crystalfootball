@@ -9,13 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Crystal Football Brand Colors - Simplified Palette
-        'cyan-blue': 'var(--color-cyan-blue)',
-        'cyan-blue-light': 'var(--color-cyan-blue-light)',
-        'cyan-blue-dark': 'var(--color-cyan-blue-dark)',
-        'pure-black': 'var(--color-pure-black)',
-        'deep-charcoal': 'var(--color-deep-charcoal)',
-        'pure-white': 'var(--color-pure-white)',
+        // Crystal Football Brand Colors
+        'royal-blue': 'var(--color-royal-blue)',
+        'dark-navy': 'var(--color-dark-navy)',
+        'light-blue': 'var(--color-light-blue)',
+        gold: 'var(--color-gold)',
+        'deep-gold': 'var(--color-deep-gold)',
+        cyan: 'var(--color-cyan)',
+        charcoal: 'var(--color-charcoal)',
+        'white-text': 'var(--color-white)',
 
         // Semantic Color System
         background: 'var(--color-background)',
@@ -92,14 +94,9 @@ const config: Config = {
       },
       keyframes: {
         'glow-pulse': {
-          '0%': { boxShadow: '0 0 20px rgba(0, 191, 255, 0.3)' },
-          '100%': { boxShadow: '0 0 30px rgba(0, 191, 255, 0.6)' },
+          '0%': { boxShadow: '0 0 20px rgba(163, 223, 255, 0.3)' },
+          '100%': { boxShadow: '0 0 30px rgba(163, 223, 255, 0.6)' },
         },
-      },
-      backgroundImage: {
-        'gradient-cyan': 'linear-gradient(90deg, #FFFFFF 0%, #00BFFF 100%)',
-        'gradient-cyan-diagonal': 'linear-gradient(135deg, #FFFFFF 0%, #00BFFF 100%)',
-        'gradient-dark': 'linear-gradient(135deg, #000000 0%, #0B0E15 100%)',
       },
     },
   },

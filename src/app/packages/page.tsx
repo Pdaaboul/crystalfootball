@@ -17,7 +17,7 @@ export default function PackagesPage() {
               <div key={plan} className="bg-card border border-border rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-2">{plan} Plan</h3>
                 <p className="text-muted-foreground mb-4">Coming soon...</p>
-                <button className="w-full bg-muted text-muted-foreground px-4 py-2 rounded-lg cursor-not-allowed">
+                <button className="w-full bg-primary hover:bg-primary-hover text-primary-foreground py-3 px-4 rounded-lg font-medium transition-all duration-200 focus-visible-cyan">
                   Details Coming Soon
                 </button>
               </div>

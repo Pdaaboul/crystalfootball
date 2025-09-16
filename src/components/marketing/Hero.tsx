@@ -6,24 +6,24 @@ export default function Hero() {
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-dark">
         {/* Floating gradient panels */}
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-royal opacity-20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-cyan opacity-20 rounded-full blur-3xl animate-pulse" />
         <div
-          className="absolute top-3/4 right-1/4 w-96 h-96 bg-gradient-royal opacity-15 rounded-full blur-3xl animate-pulse"
+          className="absolute top-3/4 right-1/4 w-96 h-96 bg-gradient-cyan opacity-15 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '2s' }}
         />
         <div
-          className="absolute bottom-1/4 left-1/2 w-80 h-80 bg-gradient-royal opacity-10 rounded-full blur-3xl animate-pulse"
+          className="absolute bottom-1/4 left-1/2 w-80 h-80 bg-gradient-cyan opacity-10 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '4s' }}
         />
 
         {/* Cyan glow accents */}
-        <div className="absolute top-1/2 left-10 w-2 h-32 bg-cyan opacity-30 blur-sm animate-glow-pulse" />
+        <div className="absolute top-1/2 left-10 w-2 h-32 bg-cyan-blue opacity-30 blur-sm animate-glow-pulse" />
         <div
-          className="absolute top-1/3 right-20 w-2 h-24 bg-cyan opacity-25 blur-sm animate-glow-pulse"
+          className="absolute top-1/3 right-20 w-2 h-24 bg-cyan-blue opacity-25 blur-sm animate-glow-pulse"
           style={{ animationDelay: '1s' }}
         />
         <div
-          className="absolute bottom-1/3 left-1/3 w-1 h-16 bg-cyan opacity-20 blur-sm animate-glow-pulse"
+          className="absolute bottom-1/3 left-1/3 w-1 h-16 bg-cyan-blue opacity-20 blur-sm animate-glow-pulse"
           style={{ animationDelay: '3s' }}
         />
       </div>
@@ -32,9 +32,8 @@ export default function Hero() {
       <div className="relative z-10 container text-center pt-20 pb-12">
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
-            AI-backed betslips, <span className="text-gradient-gold">built for winning</span> with
-            discipline
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <span className="text-gradient-cyan">AI-backed betslips, built for winning with discipline</span>
           </h1>
 
           {/* Supporting Copy */}
@@ -64,7 +63,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 pb-12 md:pb-4">
             <a
               href="/register"
-              className="bg-primary hover:bg-primary-hover text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 focus-visible-gold glow-gold hover:glow-gold transform hover:scale-105"
+              className="bg-primary hover:bg-primary-hover text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 focus-visible-cyan glow-cyan hover:glow-cyan-strong transform hover:scale-105"
             >
               Get VIP Access
             </a>

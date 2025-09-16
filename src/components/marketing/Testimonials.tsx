@@ -113,7 +113,7 @@ export default function Testimonials() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               What Our Members Say
             </h2>
-            <div className="w-24 h-1 bg-gradient-gold mx-auto rounded-full mb-8" />
+            <div className="w-24 h-1 bg-gradient-cyan mx-auto rounded-full mb-8" />
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Join thousands of successful bettors who trust Crystal Football for their daily
               predictions.
@@ -141,7 +141,7 @@ export default function Testimonials() {
                       {/* Rating */}
                       <div className="flex justify-center mb-4">
                         {[...Array(testimonial.rating)].map((_, i) => (
-                          <span key={i} className="text-gold text-xl">
+                          <span key={i} className="text-cyan-blue text-xl">
                             ⭐
                           </span>
                         ))}
@@ -211,7 +211,7 @@ export default function Testimonials() {
                   {/* Rating */}
                   <div className="flex justify-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-gold text-lg">
+                      <span key={i} className="text-cyan-blue text-lg">
                         ⭐
                       </span>
                     ))}
@@ -232,7 +232,7 @@ export default function Testimonials() {
             <p className="text-muted-foreground mb-6">Ready to start your own success story?</p>
             <a
               href="/register"
-              className="inline-flex items-center justify-center bg-primary hover:bg-primary-hover text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 focus-visible-gold glow-gold hover:glow-gold"
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary-hover text-primary-foreground px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200 focus-visible-cyan glow-cyan hover:glow-cyan-strong"
             >
               Join 1,500+ Members
             </a>

@@ -8,7 +8,7 @@ export default function CTASection() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Ready to Start Winning?
             </h2>
-            <div className="w-24 h-1 bg-gradient-gold mx-auto rounded-full mb-8" />
+            <div className="w-24 h-1 bg-gradient-cyan mx-auto rounded-full mb-8" />
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Join over 1,500 successful bettors who trust Crystal Football for consistent,
               profitable predictions backed by advanced AI analysis.
@@ -17,7 +17,7 @@ export default function CTASection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/register"
-                className="bg-primary hover:bg-primary-hover text-primary-foreground px-12 py-4 rounded-lg font-bold text-xl transition-all duration-200 focus-visible-gold glow-gold hover:glow-gold transform hover:scale-105"
+                className="bg-primary hover:bg-primary-hover text-primary-foreground px-12 py-4 rounded-lg font-bold text-xl transition-all duration-200 focus-visible-cyan glow-cyan hover:glow-cyan-strong transform hover:scale-105"
               >
                 Start Now - $50/month
               </a>
@@ -50,7 +50,7 @@ export default function CTASection() {
                 className="group bg-card border border-border hover:border-accent rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 focus-visible-cyan w-full"
               >
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-royal rounded-lg flex items-center justify-center text-2xl">
+                  <div className="w-12 h-12 bg-gradient-cyan rounded-lg flex items-center justify-center text-2xl">
                     📱
                   </div>
                   <div className="text-left">
@@ -85,7 +85,7 @@ export default function CTASection() {
           </div>
 
           {/* Final CTA */}
-          <div className="mt-16 bg-gradient-royal rounded-2xl p-8 md:p-12">
+          <div className="mt-16 bg-gradient-dark rounded-2xl p-8 md:p-12">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Don&apos;t Miss Out on Today&apos;s Predictions
             </h3>
@@ -95,7 +95,7 @@ export default function CTASection() {
             </p>
             <a
               href="/register"
-              className="inline-flex items-center justify-center bg-gold hover:bg-deep-gold text-charcoal px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200 focus-visible-gold glow-gold hover:glow-gold"
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary-hover text-primary-foreground px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200 focus-visible-cyan glow-cyan hover:glow-cyan-strong"
             >
               Get Instant Access
             </a>

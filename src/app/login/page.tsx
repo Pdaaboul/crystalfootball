@@ -11,7 +11,7 @@ export default function LoginPage() {
           </p>
           <Link
             href="/"
-            className="inline-flex items-center justify-center bg-primary hover:bg-primary-hover text-primary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200 focus-visible-gold"
+            className="w-full bg-primary hover:bg-primary-hover text-primary-foreground py-3 px-4 rounded-lg font-medium transition-all duration-200 focus-visible-cyan"
           >
             Back to Home
           </Link>

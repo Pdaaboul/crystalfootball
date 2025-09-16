@@ -8,7 +8,7 @@ export default function About() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Who We Are
             </h2>
-            <div className="w-24 h-1 bg-gradient-gold mx-auto rounded-full mb-8" />
+            <div className="w-24 h-1 bg-gradient-cyan mx-auto rounded-full mb-8" />
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               We are a team of passionate football analysts and data scientists working hand-in-hand
               with advanced AI systems. Our mission is simple: to deliver accurate, safe, and
@@ -49,7 +49,7 @@ export default function About() {
                 <div className="space-y-6">
                   {/* Data Discipline */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-royal-blue rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-8 h-8 bg-cyan-blue rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                       <div className="w-4 h-4 bg-white rounded-sm" />
                     </div>
                     <div>
@@ -63,7 +63,7 @@ export default function About() {
 
                   {/* AI Models */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-gold rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-8 h-8 bg-cyan-blue-light rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                       <div className="w-4 h-4 bg-charcoal rounded-sm" />
                     </div>
                     <div>
@@ -77,8 +77,8 @@ export default function About() {
 
                   {/* Transparent Tracking */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-cyan rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                      <div className="w-4 h-4 bg-charcoal rounded-sm" />
+                    <div className="w-8 h-8 bg-cyan-blue rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-4 h-4 bg-pure-white rounded-sm" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">Transparent Tracking</h4>

@@ -58,7 +58,7 @@ export default function Header() {
                 setIsMobileMenuOpen(false);
               }}
             >
-              <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-gold rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-cyan rounded-lg flex items-center justify-center">
                 <span className="text-charcoal font-bold text-lg md:text-xl">CF</span>
               </div>
               <span className="text-foreground font-bold text-lg md:text-xl">Crystal Football</span>
@@ -103,7 +103,7 @@ export default function Header() {
             </a>
             <a
               href="/register"
-              className="bg-primary hover:bg-primary-hover text-primary-foreground px-6 py-2 rounded-lg font-medium transition-all duration-200 focus-visible-gold glow-gold hover:glow-gold"
+              className="bg-primary hover:bg-primary-hover text-primary-foreground px-6 py-2 rounded-lg font-medium transition-all duration-200 focus-visible-cyan glow-cyan hover:glow-cyan-strong"
             >
               Get Started
             </a>
@@ -172,7 +172,7 @@ export default function Header() {
                 </a>
                 <a
                   href="/register"
-                  className="block bg-primary hover:bg-primary-hover text-primary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200 focus-visible-gold text-center"
+                  className="block bg-primary hover:bg-primary-hover text-primary-foreground px-8 py-4 rounded-lg font-medium transition-all duration-200 focus-visible-cyan text-center"
                 >
                   Get Started
                 </a>

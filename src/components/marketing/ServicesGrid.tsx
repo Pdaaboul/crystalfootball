@@ -8,7 +8,7 @@ export default function ServicesGrid() {
         'Curated, risk-screened selections with confidence ratings. Premium AI-backed predictions with detailed analysis and reasoning.',
       features: ['Daily predictions', 'Confidence ratings', 'Risk assessment', 'VIP support'],
       icon: '⭐',
-      accent: 'gold',
+      accent: 'cyan-blue',
     },
     {
       title: 'Correct Score',
@@ -16,7 +16,7 @@ export default function ServicesGrid() {
         'Scenario-tested outcomes with smart staking notes. Specialized predictions using advanced statistical models.',
       features: ['High-value picks', 'Scenario testing', 'Smart staking', 'Goal patterns'],
       icon: '🎯',
-      accent: 'cyan',
+      accent: 'cyan-blue-light',
     },
     {
       title: 'Acca',
@@ -24,7 +24,7 @@ export default function ServicesGrid() {
         'Structured, volatility-aware accumulators. Carefully curated bets with balanced risk-reward ratios.',
       features: ['Volatility checks', 'Risk balancing', 'Profit optimization', 'Disciplined edges'],
       icon: '🔗',
-      accent: 'royal-blue',
+      accent: 'cyan-blue-light',
     },
     {
       title: 'Competitions',
@@ -37,7 +37,7 @@ export default function ServicesGrid() {
         'Performance tracking',
       ],
       icon: '🏆',
-      accent: 'light-blue',
+      accent: 'cyan-blue-light',
     },
   ];
 
@@ -50,7 +50,7 @@ export default function ServicesGrid() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Our Services
             </h2>
-            <div className="w-24 h-1 bg-gradient-gold mx-auto rounded-full mb-8" />
+            <div className="w-24 h-1 bg-gradient-cyan mx-auto rounded-full mb-8" />
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               From VIP tips to specialized markets, we offer comprehensive betting solutions
               tailored to different strategies and risk appetites.
@@ -62,7 +62,7 @@ export default function ServicesGrid() {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="group bg-royal-blue hover:bg-light-blue rounded-xl p-8 transition-colors duration-300 hover:shadow-xl hover:shadow-light-blue/10"
+                className="group bg-cyan-blue hover:bg-cyan-blue-light rounded-xl p-8 transition-colors duration-300 hover:shadow-xl hover:shadow-cyan-blue/10"
               >
                 {/* Service Icon */}
                 <div className="text-4xl mb-6">{service.icon}</div>
@@ -90,7 +90,7 @@ export default function ServicesGrid() {
           </div>
 
           {/* Our Promise Section */}
-          <div className="mt-20 bg-gradient-royal rounded-2xl p-8 md:p-12 text-center">
+          <div className="mt-20 bg-gradient-dark rounded-2xl p-8 md:p-12 text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">Our Promise</h3>
             <p className="text-white/90 text-lg leading-relaxed max-w-4xl mx-auto mb-8">
               We are fully transparent — every week we share results, winning ratios, and clear
@@ -111,7 +111,7 @@ export default function ServicesGrid() {
                   element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="inline-flex items-center justify-center bg-primary hover:bg-primary-hover text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 focus-visible-gold glow-gold hover:glow-gold"
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary-hover text-primary-foreground px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200 focus-visible-cyan glow-cyan hover:glow-cyan-strong"
             >
               View All Packages
             </button>

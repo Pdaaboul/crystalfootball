@@ -1,55 +1,52 @@
 @import 'tailwindcss';
 
 :root {
-  /* Crystal Football Brand Tokens */
-  --royal-blue: #1e66a9;
-  --crystal-blue: #1e66a9; /* Same as royal blue */
-  --dark-navy: #0c2f57;
-  --light-blue-highlight: #3fa9f5;
-  --gold: #ffd700;
-  --deep-gold: #d4af37;
-  --light-cyan: #a3dfff;
-  --charcoal: #0b0e15;
-  --white-text: #ffffff;
+  /* Crystal Football Brand Tokens - Simplified Palette */
+  --cyan-blue: #00BFFF;
+  --cyan-blue-light: #40D4FF;
+  --cyan-blue-dark: #0095CC;
+  --pure-black: #000000;
+  --deep-charcoal: #0B0E15;
+  --pure-white: #FFFFFF;
 
   /* Background Colors */
-  --background: var(--dark-navy);
-  --background-alt: var(--charcoal);
-  --foreground: var(--white-text);
+  --background: var(--pure-black);
+  --background-alt: var(--deep-charcoal);
+  --foreground: var(--pure-white);
 
-  /* Primary Actions (Gold) */
-  --primary: var(--gold);
-  --primary-hover: var(--deep-gold);
-  --primary-foreground: var(--charcoal);
+  /* Primary Actions (Cyan Blue) */
+  --primary: var(--cyan-blue);
+  --primary-hover: var(--cyan-blue-light);
+  --primary-foreground: var(--pure-black);
 
-  /* Secondary Actions (Royal Blue) */
-  --secondary: var(--royal-blue);
-  --secondary-hover: var(--light-blue-highlight);
-  --secondary-foreground: var(--white-text);
+  /* Secondary Actions (Charcoal/White) */
+  --secondary: var(--deep-charcoal);
+  --secondary-hover: var(--cyan-blue-dark);
+  --secondary-foreground: var(--pure-white);
 
-  /* Accent Colors (Cyan) */
-  --accent: var(--light-cyan);
-  --accent-foreground: var(--charcoal);
+  /* Accent Colors (Cyan variants) */
+  --accent: var(--cyan-blue-light);
+  --accent-foreground: var(--pure-black);
 
   /* UI Element Colors */
-  --card: var(--dark-navy);
-  --card-foreground: var(--white-text);
-  --popover: var(--dark-navy);
-  --popover-foreground: var(--white-text);
-  --muted: var(--charcoal);
+  --card: var(--deep-charcoal);
+  --card-foreground: var(--pure-white);
+  --popover: var(--deep-charcoal);
+  --popover-foreground: var(--pure-white);
+  --muted: var(--deep-charcoal);
   --muted-foreground: #a0a0a0;
   --destructive: #dc2626;
-  --destructive-foreground: var(--white-text);
-  --border: var(--light-cyan);
-  --input: var(--charcoal);
-  --ring: var(--light-cyan);
+  --destructive-foreground: var(--pure-white);
+  --border: var(--cyan-blue);
+  --input: var(--deep-charcoal);
+  --ring: var(--cyan-blue);
   --radius: 0.5rem;
 
   /* Success and Warning */
   --success: #10b981;
-  --success-foreground: var(--white-text);
+  --success-foreground: var(--pure-white);
   --warning: #f59e0b;
-  --warning-foreground: var(--charcoal);
+  --warning-foreground: var(--pure-black);
 }
 
 @theme inline {
@@ -61,15 +58,13 @@
   --container-max-width-xl: 1280px;
   --container-max-width-2xl: 1400px;
 
-  /* Crystal Football Color System */
-  --color-royal-blue: var(--royal-blue);
-  --color-dark-navy: var(--dark-navy);
-  --color-light-blue: var(--light-blue-highlight);
-  --color-gold: var(--gold);
-  --color-deep-gold: var(--deep-gold);
-  --color-cyan: var(--light-cyan);
-  --color-charcoal: var(--charcoal);
-  --color-white: var(--white-text);
+  /* Crystal Football Color System - Simplified Palette */
+  --color-cyan-blue: var(--cyan-blue);
+  --color-cyan-blue-light: var(--cyan-blue-light);
+  --color-cyan-blue-dark: var(--cyan-blue-dark);
+  --color-pure-black: var(--pure-black);
+  --color-deep-charcoal: var(--deep-charcoal);
+  --color-pure-white: var(--pure-white);
 
   /* Semantic Color Mappings */
   --color-background: var(--background);
@@ -162,41 +157,65 @@ body {
   }
 }
 
-/* Custom utility classes for Crystal Football branding */
-.bg-gradient-royal {
-  background: linear-gradient(135deg, var(--royal-blue), var(--light-blue-highlight));
-}
-
-.bg-gradient-gold {
-  background: linear-gradient(135deg, var(--gold), var(--deep-gold));
+/* Custom utility classes for Crystal Football branding - Simplified Palette */
+.bg-gradient-cyan {
+  background: linear-gradient(135deg, var(--cyan-blue), var(--cyan-blue-light));
 }
 
 .bg-gradient-dark {
-  background: linear-gradient(135deg, var(--dark-navy), var(--charcoal));
+  background: linear-gradient(135deg, var(--pure-black), var(--deep-charcoal));
 }
 
-.text-gradient-gold {
-  background: linear-gradient(135deg, var(--gold), var(--deep-gold));
+.text-gradient-cyan {
+  background: linear-gradient(90deg, var(--pure-white) 0%, var(--cyan-blue) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan-diagonal {
+  background: linear-gradient(135deg, var(--pure-white) 0%, var(--cyan-blue) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .glow-cyan {
-  box-shadow: 0 0 20px rgba(163, 223, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
 }
 
-.glow-gold {
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+.glow-cyan-strong {
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.6);
 }
 
 /* Focus and hover states for accessibility */
-.focus-visible-gold:focus-visible {
-  outline: 2px solid var(--gold);
+.focus-visible-cyan:focus-visible {
+  outline: 2px solid var(--cyan-blue);
   outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(0, 191, 255, 0.3);
 }
 
-.focus-visible-cyan:focus-visible {
-  outline: 2px solid var(--light-cyan);
-  outline-offset: 2px;
+/* Responsive text gradient utility */
+@media (max-width: 767px) {
+  .text-gradient-cyan,
+  .text-gradient-cyan-diagonal {
+    background: linear-gradient(90deg, var(--pure-white) 0%, var(--cyan-blue) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Animation classes for enhanced interactivity */
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(0, 191, 255, 0.6);
+  }
 }
