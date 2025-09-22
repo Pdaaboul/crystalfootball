@@ -67,9 +67,12 @@ export default async function DashboardPage() {
               <p className="text-muted-foreground mb-4">
                 Manage your Crystal Football subscription and billing.
               </p>
-              <button className="bg-primary hover:bg-primary-hover text-primary-foreground px-4 py-2 rounded-lg font-medium transition-colors focus-visible-cyan">
+              <Link 
+                href="/dashboard/subscription"
+                className="bg-primary hover:bg-primary-hover text-primary-foreground px-4 py-2 rounded-lg font-medium transition-colors focus-visible-cyan inline-block"
+              >
                 View Subscription
-              </button>
+              </Link>
             </div>
 
             <div className="bg-card border border-border rounded-xl p-6">

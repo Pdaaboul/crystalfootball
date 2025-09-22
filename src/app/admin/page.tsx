@@ -56,22 +56,56 @@ export default async function AdminPage() {
               </button>
             </div>
 
-            {/* Packages Management */}
-            <div className="bg-card border border-border rounded-xl p-6 hover:border-cyan-blue/30 transition-colors">
-              <div className="w-12 h-12 bg-cyan-blue/10 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-cyan-blue text-xl">📦</span>
+                          {/* Subscriptions Management */}
+              <div className="bg-card border border-border rounded-xl p-6 hover:border-cyan-blue/30 transition-colors">
+                <div className="w-12 h-12 bg-cyan-blue/10 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-cyan-blue text-xl">💳</span>
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Subscriptions</h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Review payments, approve subscriptions, and manage user accounts.
+                </p>
+                <Link
+                  href="/admin/subscriptions"
+                  className="bg-primary hover:bg-primary-hover text-primary-foreground px-4 py-2 rounded-lg font-medium transition-colors focus-visible-cyan w-full block text-center"
+                >
+                  Manage Subscriptions
+                </Link>
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">Packages</h3>
-              <p className="text-muted-foreground text-sm mb-4">
-                Create and manage subscription packages and features.
-              </p>
-              <Link
-                href="/admin/packages"
-                className="bg-primary hover:bg-primary-hover text-primary-foreground px-4 py-2 rounded-lg font-medium transition-colors focus-visible-cyan w-full block text-center"
-              >
-                Manage Packages
-              </Link>
-            </div>
+
+              {/* Payment Settings */}
+              <div className="bg-card border border-border rounded-xl p-6 hover:border-cyan-blue/30 transition-colors">
+                <div className="w-12 h-12 bg-cyan-blue/10 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-cyan-blue text-xl">💰</span>
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Payment Settings</h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Configure payment methods and instructions for users.
+                </p>
+                <Link
+                  href="/admin/payments"
+                  className="bg-primary hover:bg-primary-hover text-primary-foreground px-4 py-2 rounded-lg font-medium transition-colors focus-visible-cyan w-full block text-center"
+                >
+                  Payment Settings
+                </Link>
+              </div>
+
+              {/* Packages Management */}
+              <div className="bg-card border border-border rounded-xl p-6 hover:border-cyan-blue/30 transition-colors">
+                <div className="w-12 h-12 bg-cyan-blue/10 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-cyan-blue text-xl">📦</span>
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Packages</h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Create and manage subscription packages and features.
+                </p>
+                <Link
+                  href="/admin/packages"
+                  className="bg-primary hover:bg-primary-hover text-primary-foreground px-4 py-2 rounded-lg font-medium transition-colors focus-visible-cyan w-full block text-center"
+                >
+                  Manage Packages
+                </Link>
+              </div>
 
             {/* Analytics */}
             <div className="bg-card border border-border rounded-xl p-6 hover:border-cyan-blue/30 transition-colors">
