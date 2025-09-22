@@ -56,18 +56,21 @@ export default async function AdminPage() {
               </button>
             </div>
 
-            {/* Content Management */}
+            {/* Packages Management */}
             <div className="bg-card border border-border rounded-xl p-6 hover:border-cyan-blue/30 transition-colors">
               <div className="w-12 h-12 bg-cyan-blue/10 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-cyan-blue text-xl">📝</span>
+                <span className="text-cyan-blue text-xl">📦</span>
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">Content</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Packages</h3>
               <p className="text-muted-foreground text-sm mb-4">
-                Manage betslips, predictions, and content approval.
+                Create and manage subscription packages and features.
               </p>
-              <button className="bg-primary hover:bg-primary-hover text-primary-foreground px-4 py-2 rounded-lg font-medium transition-colors focus-visible-cyan w-full">
-                Manage Content
-              </button>
+              <Link
+                href="/admin/packages"
+                className="bg-primary hover:bg-primary-hover text-primary-foreground px-4 py-2 rounded-lg font-medium transition-colors focus-visible-cyan w-full block text-center"
+              >
+                Manage Packages
+              </Link>
             </div>
 
             {/* Analytics */}
