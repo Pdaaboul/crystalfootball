@@ -76,13 +76,16 @@ export default async function DashboardPage() {
             </div>
 
             <div className="bg-card border border-border rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-foreground mb-4">Recent Predictions</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-4">VIP Betslips</h3>
               <p className="text-muted-foreground mb-4">
-                View your latest AI-backed betslips and performance.
+                Access exclusive AI-backed predictions with our 6-Layer Framework.
               </p>
-              <button className="bg-secondary hover:bg-secondary-hover text-secondary-foreground px-4 py-2 rounded-lg font-medium transition-colors focus-visible-cyan">
-                View Predictions
-              </button>
+              <Link 
+                href="/dashboard/vip"
+                className="bg-secondary hover:bg-secondary-hover text-secondary-foreground px-4 py-2 rounded-lg font-medium transition-colors focus-visible-cyan inline-block"
+              >
+                View VIP Feed
+              </Link>
             </div>
           </div>
 

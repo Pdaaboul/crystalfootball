@@ -107,6 +107,40 @@ export default async function AdminPage() {
                 </Link>
               </div>
 
+            {/* Betslips Management */}
+            <div className="bg-card border border-border rounded-xl p-6 hover:border-cyan-blue/30 transition-colors">
+              <div className="w-12 h-12 bg-cyan-blue/10 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-cyan-blue text-xl">⚽</span>
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Betslips</h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                Create AI-backed predictions, settle outcomes, and track P&L performance.
+              </p>
+              <Link
+                href="/admin/betslips"
+                className="bg-primary hover:bg-primary-hover text-primary-foreground px-4 py-2 rounded-lg font-medium transition-colors focus-visible-cyan w-full block text-center"
+              >
+                Manage Betslips
+              </Link>
+            </div>
+
+            {/* Leaderboard Highlights */}
+            <div className="bg-card border border-border rounded-xl p-6 hover:border-cyan-blue/30 transition-colors">
+              <div className="w-12 h-12 bg-cyan-blue/10 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-cyan-blue text-xl">🏆</span>
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Leaderboard</h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                Manage top 5 highlights showcased on public landing page.
+              </p>
+              <Link
+                href="/admin/leaderboard"
+                className="bg-primary hover:bg-primary-hover text-primary-foreground px-4 py-2 rounded-lg font-medium transition-colors focus-visible-cyan w-full block text-center"
+              >
+                Manage Highlights
+              </Link>
+            </div>
+
             {/* Analytics */}
             <div className="bg-card border border-border rounded-xl p-6 hover:border-cyan-blue/30 transition-colors">
               <div className="w-12 h-12 bg-cyan-blue/10 rounded-lg flex items-center justify-center mb-4">
@@ -114,11 +148,14 @@ export default async function AdminPage() {
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">Analytics</h3>
               <p className="text-muted-foreground text-sm mb-4">
-                View performance metrics and user analytics.
+                View betslips performance, P&L metrics, and user analytics.
               </p>
-              <button className="bg-primary hover:bg-primary-hover text-primary-foreground px-4 py-2 rounded-lg font-medium transition-colors focus-visible-cyan w-full">
+              <Link
+                href="/admin/analytics/betslips"
+                className="bg-primary hover:bg-primary-hover text-primary-foreground px-4 py-2 rounded-lg font-medium transition-colors focus-visible-cyan w-full block text-center"
+              >
                 View Analytics
-              </button>
+              </Link>
             </div>
 
             {/* Payments */}
