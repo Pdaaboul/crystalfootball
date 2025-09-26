@@ -29,9 +29,7 @@ export async function middleware(request: NextRequest) {
     }
   );
 
-  // Refresh session if needed
-  await supabase.auth.getUser();
-
+  // Get user session
   const {
     data: { user },
   } = await supabase.auth.getUser();
@@ -52,24 +50,39 @@ export async function middleware(request: NextRequest) {
   // Check if route requires authentication
   if (protectedRoutes.some(route => pathname.startsWith(route))) {
     if (!user) {
+      console.log('Middleware: No user found, redirecting to login');
       const redirectUrl = new URL('/login', request.url);
       redirectUrl.searchParams.set('redirect', pathname);
       return NextResponse.redirect(redirectUrl);
     }
 
+    console.log('Middleware: User found:', user.id, 'Email confirmed:', user.email_confirmed_at);
+
     // Check if user's email is confirmed for protected routes
     if (user && !user.email_confirmed_at) {
+      console.log('Middleware: Email not confirmed, redirecting to verify');
       const redirectUrl = new URL('/verify', request.url);
       redirectUrl.searchParams.set('email', user.email || '');
       return NextResponse.redirect(redirectUrl);
     }
 
     // Get user profile for role-based access
-    const { data: profile } = await supabase
+    const { data: profile, error: profileError } = await supabase
       .from('profiles')
       .select('role')
       .eq('user_id', user.id)
       .single();
+
+    console.log('Middleware: Profile check result:', { profile, profileError });
+
+    // If user is authenticated but no profile exists, redirect to verify page
+    // This can happen during the verification flow
+    if (!profile && pathname.startsWith('/dashboard')) {
+      console.log('Middleware: No profile found, redirecting to verify');
+      const redirectUrl = new URL('/verify', request.url);
+      redirectUrl.searchParams.set('email', user.email || '');
+      return NextResponse.redirect(redirectUrl);
+    }
 
     // Check admin routes
     if (adminRoutes.some(route => pathname.startsWith(route))) {

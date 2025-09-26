@@ -3,25 +3,43 @@ import { formatPrice } from '@/lib/utils/packages';
 
 // Get packages for preview (top 3 active packages)
 async function getPackagesPreview() {
-  const supabase = await createClient();
-  
-  const { data: packages, error } = await supabase
-    .from('packages')
-    .select(`
-      *,
-      features:package_features(*)
-    `)
-    .eq('is_active', true)
-    .order('sort_index', { ascending: true })
-    .limit(3);
+  try {
+    const supabase = await createClient();
+    
+    // Get packages with minimal fields to avoid recursion
+    const { data: packages, error } = await supabase
+      .from('packages')
+      .select('id, name, description, price_cents, original_price_cents, duration_days, sort_index')
+      .eq('is_active', true)
+      .order('sort_index', { ascending: true })
+      .limit(3);
 
-  if (error) {
-    console.error('Failed to fetch packages preview:', error);
-    return [];
+    if (error) {
+      console.error('Failed to fetch packages:', error);
+      return []; // Return empty array to show "no packages" message
+    }
+
+    if (!packages || packages.length === 0) {
+      return []; // Return empty array to show "no packages" message
+    }
+
+    // Skip features query to avoid database recursion issues
+    // Admins can add features through the admin panel
+    const packagesWithFeatures = packages.map((pkg) => ({
+      ...pkg,
+      features: [] // Empty for now - prevents database recursion
+    }));
+
+    return packagesWithFeatures;
+  } catch (error) {
+    console.error('Exception in getPackagesPreview:', error);
+    return []; // Return empty array to show "no packages" message
   }
-
-  return packages || [];
 }
+
+
+
+
 
 export default async function PackagesPreview() {
   const dbPackages = await getPackagesPreview();
@@ -36,7 +54,7 @@ export default async function PackagesPreview() {
       ? `${Math.round((1 - pkg.price_cents / pkg.original_price_cents) * 100)}% discount`
       : null,
     description: pkg.description,
-    features: pkg.features?.map((f: { description: string }) => f.description) || [],
+    features: pkg.features || [],
     popular: index === 1, // Half-Season is popular
     tier: index === 0 ? 'baseline' : index === 1 ? 'mid-tier' : 'premium',
     cta: `Choose ${pkg.name}`,
@@ -64,17 +82,25 @@ export default async function PackagesPreview() {
         </div>
 
         {packages.length === 0 ? (
-          // Fallback when no packages available
+          // Show when no packages are available in database
           <div className="text-center py-16">
             <div className="w-16 h-16 bg-muted rounded-xl flex items-center justify-center mx-auto mb-6">
               <span className="text-2xl">📦</span>
             </div>
             <h3 className="text-xl font-semibold text-foreground mb-4">
-              Packages Coming Soon
+              No Packages Available Yet
             </h3>
-            <p className="text-muted-foreground">
-              We&apos;re preparing our exclusive packages for you. Check back soon!
+            <p className="text-muted-foreground mb-6">
+              Our admin team is currently setting up subscription packages. Please check back soon for our exclusive AI-backed football prediction plans!
             </p>
+            <div className="text-sm text-muted-foreground">
+              <p>In the meantime, you can:</p>
+              <ul className="mt-2 space-y-1">
+                <li>• Register for an account to be notified when packages are available</li>
+                <li>• Contact us for early access opportunities</li>
+                <li>• Follow our updates for launch announcements</li>
+              </ul>
+            </div>
           </div>
         ) : (
           <>

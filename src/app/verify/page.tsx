@@ -106,6 +106,19 @@ function VerifyForm() {
       }
 
       if (data.user) {
+        // Check if profile already exists
+        const { data: existingProfile } = await supabase
+          .from('profiles')
+          .select('user_id, role')
+          .eq('user_id', data.user.id)
+          .single();
+
+        if (existingProfile) {
+          // Profile exists, redirect to dashboard
+          router.push('/dashboard');
+          return;
+        }
+
         // Create profile after successful verification
         const profileData: {
           user_id: string;
@@ -131,11 +144,22 @@ function VerifyForm() {
 
         if (profileError) {
           console.error('Profile creation error:', profileError);
+          // Check if profile already exists (conflict error)
+          if (profileError.code === '23505' || profileError.message?.includes('duplicate key')) {
+            // Profile already exists, proceed to dashboard
+            router.push('/dashboard');
+            return;
+          } else {
+            setError(`Failed to create user profile: ${profileError.message}`);
+            setIsLoading(false);
+            return;
+          }
         }
 
-        // Redirect to dashboard
-        router.push('/dashboard');
-        router.refresh();
+        // Small delay to ensure session is updated, then redirect
+        setTimeout(() => {
+          router.push('/dashboard');
+        }, 1000);
       }
           } catch {
         setError('An unexpected error occurred. Please try again.');
